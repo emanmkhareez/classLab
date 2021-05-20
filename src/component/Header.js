@@ -5,7 +5,7 @@ class Header extends React.Component{
         return(
             <div>
                 <h1>
-                    Gallerry of Horns
+                Gallerry of Horns
                 </h1>
             </div>
         )
