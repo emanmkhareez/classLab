@@ -4,7 +4,7 @@ import Main from './component/Main';
 import Footer from './component/Footer';
 import HornData from './component/Data.json';
 import SelectedBeast from './component/SelectedBeast';
-
+import Form from 'react-bootstrap/Form';
 
 
 
@@ -18,8 +18,15 @@ class App extends React.Component{
       title:'',
       desc:'',
       show:false
-    }
-  }
+    };
+  };
+  
+  FilterFun = (horn) =>{
+    this.setState({
+      HornData:horn
+
+    });
+  };
   
 
 
@@ -28,7 +35,7 @@ class App extends React.Component{
 
   handleClose = () => {
     this.setState({ show: false })
-  }
+  };
   
 
 
@@ -43,7 +50,7 @@ class App extends React.Component{
     }
  
     )
- }
+ };
 
 
 
@@ -53,7 +60,9 @@ class App extends React.Component{
         <Header/>
 
     <Main
-    HornData={this.state.HornData} stateFun={this.stateFun}
+    HornData={this.state.HornData} 
+    stateFun={this.stateFun}
+    FilterFun={this.FilterFun}
     />
         <Footer/>
         <SelectedBeast
@@ -61,6 +70,6 @@ class App extends React.Component{
         />
       </div>
     )
-  }
-}
+  };
+};
 export default App;
