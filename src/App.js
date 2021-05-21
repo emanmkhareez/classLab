@@ -35,8 +35,9 @@ class App extends React.Component{
 
   stateFun=(data1,data2,data3)=>{
     this.setState({
-      imgurl:data1,
       title:data2,
+      imgurl:data1,
+    
       desc:data3,
       show:true
     }

@@ -29,18 +29,18 @@ increaseVote =() =>{
         return(
 
 <div id="div1">
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '18rem' }} onClick={this.prop3Function}>
 <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
-  <Card.Img variant="top" src={this.props.imgSrc}  alt={this.props.title} title={this.props.title} onClick={this.increaseVote}   />
+  <Card.Img variant="top" src={this.props.imgSrc}  alt={this.props.title} title={this.props.title}    />
   
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
     
 
-    <Button onClick={this.prop3Function}  variant="primary">VOTE </Button>
+    <Button variant="primary" onClick={this.increaseVote}>VOTE </Button>
   </Card.Body>
   <h2>{this.state.vote}</h2>
 </Card>
