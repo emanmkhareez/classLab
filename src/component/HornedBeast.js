@@ -5,6 +5,11 @@ import Button from 'react-bootstrap/Button';
 
 class HornedBeast extends React.Component{
 
+    prop3Function=(para1,para2,para3)=>{
+        this.props.prop2Function(para1,para2,para3);
+        
+    }
+
      constructor(props){
          super(props);
          this.state={
@@ -28,12 +33,14 @@ increaseVote =() =>{
 <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
-  <Card.Img variant="top" src={this.props.imgUrl}  alt={this.props.title} title={this.props.title}  />
+  <Card.Img variant="top" src={this.props.imgSrc}  alt={this.props.title} title={this.props.title} onClick={this.increaseVote}   />
   
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
-    <Button variant="primary"  onClick={this.increaseVote} >Vote</Button>
+    
+
+    <Button onClick={this.prop3Function}  variant="primary">VOTE </Button>
   </Card.Body>
   <h2>{this.state.vote}</h2>
 </Card>
