@@ -63,7 +63,6 @@ increaseVote =() =>{
 
             
             {/* <h2>{this.props.title}</h2>
-
          <img src={this.props.imgUrl} alt={this.props.title} title={this.props.title} />
    
    <button onClick={this.increaseVote}>Vote </button>
