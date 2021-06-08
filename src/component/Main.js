@@ -16,10 +16,17 @@ class Main extends React.Component{
                     description= {item.description}
                     />
     )
+
 })
+
     }
+    
 
 
+</>
+        )
+    }
+}
 
 
 
@@ -52,8 +59,4 @@ img={'https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHj
 description={" Someone wearing a creepy unicorn head mask" }
 /> */}
  
-            </>
-        )
-    }
-}
 export default Main;
