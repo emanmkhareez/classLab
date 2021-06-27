@@ -8,22 +8,22 @@ import HornData from './Data.json';
 
 class Main extends React.Component{
 
-    formFun = (event) =>{
-        let numHorns = event.target.value;
-        let hornsData = HornData;
-        let BeastNum;
-        if(numHorns){
-            BeastNum = hornsData.filter(item=>{
-            if (item.horns == numHorns){
-                return item;
-            };
-        })
+//     formFun = (event) =>{
+//         let numHorns = event.target.value;
+//         let hornsData = HornData;
+//         let BeastNum;
+//         if(numHorns){
+//             BeastNum = hornsData.filter(item=>{
+//             if (item.horns == numHorns){
+//                 return item;
+//             };
+//         })
 
-    }else{
-        BeastNum= hornsData;
-    }
-    this.props.FilterFun(BeastNum);
-};
+//     }else{
+//         BeastNum= hornsData;
+//     }
+//     this.props.FilterFun(BeastNum);
+// };
 
     prop1Function=(data1,data2,data3)=>{
         this.props.stateFun(data1,data2,data3);
@@ -42,7 +42,7 @@ class Main extends React.Component{
 
 
 
-<Form>
+{/* <Form>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Choose the number of horne</Form.Label>
                         <Form.Control as="select" onChange ={this.formFun}> 
@@ -55,7 +55,7 @@ class Main extends React.Component{
             
                     </Form.Group>
                 </Form>
-
+ */}
 
 
 

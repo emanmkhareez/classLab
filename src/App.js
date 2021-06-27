@@ -5,6 +5,7 @@ import Footer from './component/Footer';
 import HornData from './component/Data.json';
 import SelectedBeast from './component/SelectedBeast';
 import Form from 'react-bootstrap/Form';
+import FormFile from './component/FormFile'
 
 
 
@@ -57,17 +58,21 @@ class App extends React.Component{
   render(){
     return(
       <div>
+           <FormFile
+           FilterFun={this.FilterFun}
+           />
         <Header/>
 
     <Main
     HornData={this.state.HornData} 
     stateFun={this.stateFun}
-    FilterFun={this.FilterFun}
+    
     />
         <Footer/>
         <SelectedBeast
         data1={this.state.imgurl} data2={this.state.title} data3={this.state.desc}shown={this.state.show}handleClose={this.handleClose}
         />
+     
       </div>
     )
   };
