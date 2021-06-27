@@ -13,7 +13,7 @@ import React from 'react';
                  </h2>
              </div>
          )
-     }
+     };
 
- }
+ };
  export default Footer;
