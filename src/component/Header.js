@@ -4,8 +4,8 @@ class Header extends React.Component{
     render(){
         return(
             <div>
-                <h1>
-                    Gallerry of Horns
+                <h1 style={{textAlign:'center'}}>
+                Gallerry of Horns
                 </h1>
             </div>
         )
