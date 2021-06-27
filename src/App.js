@@ -8,8 +8,16 @@ class App extends React.Component{
     return(
       <div>
         <Header/>
-
+<br></br>
     <Main/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br>
+    <br></br>
         <Footer/>
       </div>
     )
