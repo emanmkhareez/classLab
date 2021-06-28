@@ -1,92 +1,30 @@
-import React from 'react';
-import HornedBeast from './HornedBeast';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form';
-import HornData from './Data.json';
-
-
+import React from 'react'
+import HornedBeast from './HornedBeast'
 
 class Main extends React.Component{
+    render() {
+        return (
+            <div>
+                <HornedBeast
+                title="Rhino Family"
+                image_url="https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80"
+                description= " Mother (or father) rhino with two babies"
+                />
 
-    formFun = (event) =>{
-        let numHorns = event.target.value;
-        let hornsData = HornData;
-        let BeastNum;
-        if(numHorns){
-            BeastNum = hornsData.filter(item=>{
-            if (item.horns == numHorns){
-                return item;
-            };
-        })
+<HornedBeast
+                title="Unicorn Head"
+                image_url="https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg"
+                description= "Someone wearing a creepy unicorn head mask"
+                />
+                <HornedBeast
+                title="UniWhal"
+                image_url="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
+                description= "A unicorn and a narwhal nuzzling their horns"
+                />
+                
 
-    }else{
-        BeastNum= hornsData;
+            </div>
+        )
     }
-    this.props.FilterFun(BeastNum);
-};
-
-    prop1Function=(data1,data2,data3)=>{
-        this.props.stateFun(data1,data2,data3);
-        
-        
-    };
-    
-    render(){
-        return(
-            <>
-
-
-
-
-
-
-
-
-<Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Choose the number of horne</Form.Label>
-                        <Form.Control as="select" onChange ={this.formFun}> 
-                        <option value=''>All</option>
-                        <option value='1'>One</option>
-                        <option value='2'>Two</option>
-                        <option value='3'>Three</option>
-                        <option value='100'>Wow</option>
-                        </Form.Control>
-            
-                    </Form.Group>
-                </Form>
-
-
-
-
-
-
-
-            {
-                this.props.HornData.map(item=>{
-                    return(
-                        <>
-                        <HornedBeast 
-                        title={item.title}
-                        imgSrc={item.image_url}
-                        description={item.description}
-                        prop2Function={()=>this.prop1Function(item.title,item.image_url,item.description)}
-                       
-                     //    selectedData={this}
-                        
-                        />
-                        {/* <button onClick={this.prop1Function}>Voteee</button> */}
-                        
-                       
-                        </>
-                    )
-                })
-            };
-        </>
-              
-              )
-            };
-        };
-        
-
-export default Main;
+}
+export default Main
