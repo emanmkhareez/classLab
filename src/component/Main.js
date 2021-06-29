@@ -1,4 +1,3 @@
-  
 import React from 'react';
 import HornedBeast from './HornedBeast';
 import Data from './Data'
