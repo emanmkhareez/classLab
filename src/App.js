@@ -58,12 +58,16 @@ class App extends React.Component{
     return(
       <div>
         <Header/>
-
-    <Main
-    HornData={this.state.HornData} 
-    stateFun={this.stateFun}
-    FilterFun={this.FilterFun}
-    />
+<br></br>
+    <Main/>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br><br></br>
+    <br></br><br></br>
+    <br></br>
+    <br></br>
+    <br></br>
         <Footer/>
         <SelectedBeast
         data1={this.state.imgurl} data2={this.state.title} data3={this.state.desc}shown={this.state.show}handleClose={this.handleClose}
