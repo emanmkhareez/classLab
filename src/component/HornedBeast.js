@@ -23,19 +23,18 @@ increaseVote =() =>{
 
         return(
 
-<div id="div1">
-<Card style={{ width: '18rem' }}>
-<Card.Body>
+<div id="div1"  style={{display:'inline-block',width:'300px',padding:'10px'}}>
+<Card>
+<Card.Body >
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
-  <Card.Img variant="top" src={this.props.imgUrl} alt={this.props.title} title={this.props.title}  />
+  <img   style={{width:'250px'}} variant="top" src={this.props.imgUrl} alt={this.props.title} title={this.props.title}  />
   
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    <p>{this.props.description}</p>
     </Card.Text>
     <Button variant="primary"  onClick={this.increaseVote} >Vote</Button>
   </Card.Body>
-  <h2>{this.state.vote}</h2>
+  <h2>😻{this.state.vote}</h2>
 </Card>
 
 
