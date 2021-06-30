@@ -48,7 +48,7 @@ popUpTheCard=()=>{
 
     <Button variant="primary" onClick={this.increaseVote}>VOTE </Button>
   </Card.Body>
-  <h2>{this.state.vote}</h2>
+  <h2>😻{this.state.vote}</h2>
 </Card>
 
 
