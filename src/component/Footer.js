@@ -9,11 +9,11 @@ import React from 'react';
          return(
              <div>
                  <h2>
-                 author:Eman Mkhareez  
+                 Author:Eman Mkhareez  
                  </h2>
              </div>
          )
-     }
+     };
 
- }
+ };
  export default Footer;

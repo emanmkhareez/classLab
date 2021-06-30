@@ -4,7 +4,7 @@ import Main from './component/Main';
 import Footer from './component/Footer';
 import HornData from './component/Data.json';
 import SelectedBeast from './component/SelectedBeast';
-
+import Form from 'react-bootstrap/Form';
 
 
 
@@ -29,7 +29,7 @@ class App extends React.Component{
 
   handleClose = () => {
     this.setState({ show: false })
-  }
+  };
   
 
 
@@ -79,6 +79,6 @@ class App extends React.Component{
         />
       </div>
     )
-  }
-}
+  };
+};
 export default App;

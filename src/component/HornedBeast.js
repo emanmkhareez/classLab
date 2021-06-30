@@ -14,15 +14,15 @@ class HornedBeast extends React.Component{
          super(props);
          this.state={
              vote:0
-         }
+         };
 
-     }
+     };
 increaseVote =() =>{
     this.setState({
         vote:this.state.vote+1
     })
     
-}
+};
 
 popUpTheCard=()=>{
     this.props.popUpTheCard(this.props.title)
@@ -32,6 +32,8 @@ popUpTheCard=()=>{
     render(){
 
         return(
+            <div style={{display:'inline-block'}}>
+            <h2 style={{textAlign:'center'}}>{this.props.title}</h2>
 
 <div id="div1">
 <Card style={{ width: '18rem' }} onClick={this.popUpTheCard}>
@@ -63,19 +65,13 @@ popUpTheCard=()=>{
 
 
 
-
+</div></div>
 
             
-            {/* <h2>{this.props.title}</h2>
+        )   
 
-         <img src={this.props.imgUrl} alt={this.props.title} title={this.props.title} />
-   
-   <button onClick={this.increaseVote}>Vote </button>
-   <h2>{this.state.vote}</h2>
-         */}
-
-            </div>
-        )
+         }  
+        
     }
-}
+
 export default HornedBeast;
