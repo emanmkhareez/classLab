@@ -5,10 +5,10 @@ import Button from 'react-bootstrap/Button';
 
 class HornedBeast extends React.Component{
 
-    prop3Function=(para1,para2,para3)=>{
-        this.props.prop2Function(para1,para2,para3);
+    // prop3Function=(para1,para2,para3)=>{
+    //     this.props.prop2Function(para1,para2,para3);
         
-    };
+    // }
 
      constructor(props){
          super(props);
@@ -24,19 +24,25 @@ increaseVote =() =>{
     
 };
 
+popUpTheCard=()=>{
+    this.props.popUpTheCard(this.props.title)
+}
+
+
     render(){
 
         return(
+            <div style={{display:'inline-block'}}>
+            <h2 style={{textAlign:'center'}}>{this.props.title}</h2>
 
-<div id="div1"  style ={{display: 'inline-block'}}>
-<Card style={{ width: '18rem' }} onClick={this.prop3Function} >
+<div id="div1">
+<Card style={{ width: '18rem' }} onClick={this.popUpTheCard}>
 <Card.Body>
     <Card.Title>{this.props.title}</Card.Title>
     <Card.Text>
   <Card.Img variant="top" src={this.props.imgSrc}  alt={this.props.title} title={this.props.title}    />
   
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    <p>{this.props.description}</p>  
     </Card.Text>
     
 
@@ -61,19 +67,13 @@ increaseVote =() =>{
 
 
 
-
+</div></div>
 
             
-            {/* <h2>{this.props.title}</h2>
+        )   
 
-         <img src={this.props.imgUrl} alt={this.props.title} title={this.props.title} />
-   
-   <button onClick={this.increaseVote}>Vote </button>
-   <h2>{this.state.vote}</h2>
-         */};
+         }  
+        
+    }
 
-            </div>
-        )
-    };
-};
 export default HornedBeast;

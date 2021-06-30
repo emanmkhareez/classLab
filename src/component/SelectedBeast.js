@@ -11,16 +11,18 @@ class SelectedBeast extends React.Component{
             <Modal show={this.props.shown}>
 
 <Modal.Header>
-    {this.props.data1}
+{this.props.selectedCard.title}
 </Modal.Header>
 
 <Modal.Body>
-    <img src={this.props.data2} alt='' style={{width:"450px", height:"400px"}}></img>
+    <img src={this.props.selectedCard.image_url} alt='' style={{width:"450px", height:"400px"}}></img>
+    <br></br>
+  <p> {this.props.selectedCard.description}</p> 
+
 </Modal.Body>
 
 <Modal.Footer>
-    {this.props.data3}
-
+   
     <Button variant="secondary" onClick={this.props.handleClose}>
         Close
     </Button>

@@ -1,8 +1,5 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Form from 'react-bootstrap/Form';
-import HornData from './Data.json';
 
 
 
@@ -25,11 +22,11 @@ class Main extends React.Component{
 //     this.props.FilterFun(BeastNum);
 // };
 
-    prop1Function=(data1,data2,data3)=>{
-        this.props.stateFun(data1,data2,data3);
+    // prop1Function=(data1,data2,data3)=>{
+    //     this.props.stateFun(data1,data2,data3);
         
         
-    };
+    // }
     
     render(){
         return(
@@ -65,28 +62,31 @@ class Main extends React.Component{
             {
                 this.props.HornData.map(item=>{
                     return(
-                        <>
+                        
                         <HornedBeast 
                         title={item.title}
                         imgSrc={item.image_url}
                         description={item.description}
-                        prop2Function={()=>this.prop1Function(item.title,item.image_url,item.description)}
+                        popUpTheCard={this.props.popUpTheCard}
+                        //  prop2Function={()=>this.prop1Function(item.title,item.
+                        
+                        // image_url,item.description)}
                        
                      //    selectedData={this}
                         
                         />
-                        {/* <button onClick={this.prop1Function}>Voteee</button> */}
+                        // {/* <button onClick={this.prop1Function}>Voteee</button> */}
                         
                        
-                        </>
+                        
                     )
                 })
-            };
+            }
         </>
               
               )
-            };
-        };
+            }
+        }
         
 
 export default Main;
