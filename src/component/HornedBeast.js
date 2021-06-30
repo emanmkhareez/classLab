@@ -19,6 +19,11 @@ increaseVote =() =>{
     
 }
 
+popUpTheCard=()=>{
+    this.props.popUpTheCard(this.props.title)
+}
+
+
     render(){
 
         return(
